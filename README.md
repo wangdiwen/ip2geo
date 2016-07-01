@@ -20,13 +20,6 @@ optional arguments:
   -h, --help  show this help message and exit
   -v          show request detail info
   -s          show your public network GEO info
-
-------------------------
-
-为了方便作为一个命令行工具使用，你也可以这样：
-$ cp ip2geo.py /usr/local/bin
-$ ln -s /usr/local/bin/ip2geo.py /usr/local/bin/ip2geo
-$ ip2geo baidu.com
 ```
 
 ### 举个栗子
@@ -41,4 +34,12 @@ baidu.com 	111.13.101.208  	1863149008 	北京市 北京百度网讯科技有限
 baidu.com 	220.181.57.217  	3702864345 	北京市 北京百度网讯科技有限公司电信节点
 baidu.com 	180.149.132.47  	3029697583 	北京市 北京百度网讯科技有限公司电信节点
 baidu.com 	123.125.114.144 	2071818896 	北京亦庄联通机房
+```
+
+# As a cmd tool
+为了方便作为一个命令行工具使用，你也可以这样：
+```
+$ cp ip2geo.py /usr/local/bin
+$ ln -s /usr/local/bin/ip2geo.py /usr/local/bin/ip2geo
+$ ip2geo baidu.com
 ```
