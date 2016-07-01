@@ -1,5 +1,5 @@
 # ip2geo
-A command small tool to query GEO position from your IPv4 or domain name.
+A small command tool to query GEO position from your IPv4 or domain name. Your host computer must be online when you using this script tool.
 
 # 说明
 这是一个基于Python3的命令行小工具，根据域名或者公网IPv4地址，查询到GEO地理位置信息。（使用时需要主机联网）
