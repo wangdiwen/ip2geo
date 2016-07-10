@@ -12,6 +12,7 @@ parser.add_argument('domain', help='a domain like baidu.com | a ipv4 addr', type
 parser.add_argument('-v', help='show request detail info', action='store_true')
 parser.add_argument('-s', help='show your public network GEO info', action='store_true')
 args = parser.parse_args()
+
 print('Query IP/Host is : %s\n' % args.domain)
 
 # build remote url
