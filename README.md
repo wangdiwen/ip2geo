@@ -2,7 +2,7 @@
 A small command tool to query GEO position from your IPv4 or domain name. Your host computer must be online when you using this script tool.
 
 # 说明
-这是一个基于Python3的命令行小工具，根据域名或者公网IPv4地址，查询到GEO地理位置信息。（使用时需要主机联网）
+这是一个基于Python的命令行小工具，根据域名或者公网IPv4地址，查询到GEO地理位置信息。（使用时需要主机联网）
 
 实现原理：因为本身没有GEO数据库，工具通过向公开的在线IP查询网站ip.chinaz.com发起HTTP请求，然后进行正则解析得出有效结果。
 
@@ -10,7 +10,7 @@ A small command tool to query GEO position from your IPv4 or domain name. Your h
 
 # Usage
 ```
-$ python3 ip2geo.py -h
+$ python ip2geo.py -h
 usage: ip2geo.py [-h] [-v] [-s] domain
 
 positional arguments:
@@ -26,7 +26,7 @@ optional arguments:
 查询baidu.com的所有BGP机房出口位置
 
 ```
-$ python3 ip2geo.py baidu.com
+$ python ip2geo.py baidu.com
 Query IP/Host is : baidu.com
 
 域名/IP 	获取的IP地址         	数字地址 	IP的物理位置
