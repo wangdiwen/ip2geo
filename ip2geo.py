@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding=utf-8
 
+import sys
 import argparse
 import requests
 import urllib
@@ -34,7 +35,12 @@ headers = {
 }
 
 # http request via requests python lib
-r = requests.post(url, headers=headers, data=payload, timeout=1)
+try:
+    r = requests.post(url, headers=headers, data=payload, timeout=3)
+except Exception as e:
+    print('HTTP request error!')
+    sys.exit(1)
+
 if args.v:
     print('Request     URL: %s' % url)
     print('Request  header:')
