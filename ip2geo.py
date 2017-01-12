@@ -45,12 +45,12 @@ if args.v:
     print('Request     URL: %s' % url)
     print('Request  header:')
     print(headers)
-    print('Request payload: %s' % urllib.parse.urlencode(payload))
+    print('Request payload: %s' % urllib.urlencode(payload))
     print('Response status: %d' % r.status_code)
     print('Response header:')
     print(r.headers)            # dict type
-    # print(r.text)             # ascii text type
-    print()
+    print(r.text)             # ascii text type
+    print('')
 
 # filter result from the html content
 re_code = re.compile(r'<span class=\"Whwtdhalf w(15|50)-0\">(.*?)</span>')
@@ -71,9 +71,9 @@ del i
 
 # filter the local ip of public network
 if args.s:
-    re_code = re.compile(r'您来自：</span>(.*)?<span class=\"pl10\">所在区域：</span>(.*)?<a href')
+    re_code = re.compile(r'</span>(.*)?\t<span class=\"pl10\">(.*)?</span>(.*)?<a href=\"')
     fields = re.findall(re_code, r.text)
-    for i in fields:
-        print('\n你的公网IP： %s, IP物理地址：%s' % (i[0].strip(), i[1]))
-
+    # print fields
+    if fields:
+        print("\n出口IP：%s，物理位置：%s" % (fields[0][0].encode('utf-8'), fields[0][2].encode('utf-8')))
 del fields
